@@ -3,7 +3,7 @@
 Document/collaborate on analysis using Jupyter Notebook or Jupyter Lab
 
 
-## General stra
+## General strategy
 
 The goal is to work all together on this repository.<br/> 
 The general strategy to achieve this is to have a main master branch where labs<br/>
