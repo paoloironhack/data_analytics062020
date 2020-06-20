@@ -16,36 +16,40 @@ The teaching staff will visit the students’ branch and provide feedback on the
   1. Clone the repository on your local machine
   2. Create a local branch and give it your name.
      For example, if your name is 'paolo' do 
-
-         $ git branch paolo
-
-  4. Switch to your local branch 
-
-         $ git checkout paolo (use your actual branch name)
-
-     You will see the name of your branch next to the directory of the repository 
-
-         For example: /Documents/git/dataptams2020 (paolo)
+     
+     ```
+      git branch paolo
+     ```
+     
+  3. Switch to your local branch 
+    
+     ```
+      git checkout paolo
+     ```
+  You will see the name of your branch next to the directory of the repository 
+  For example: /Documents/git/dataptams2020 (paolo)
 
 ## How to share your work with teaching staff and receive updates on labs and projects
 
   - **You will work almost exclusively on your branch**. 
      When you want to push your results to the remote repository, 
      after adding and committing the relevant files, do
-
-    	 $ git push origin branch_name (use your actual branch name)
+     
+```
+    	  git push origin branch_name (use your actual branch name)
+```
 
    - You can update your branch, for example to view feedback 
       given from the teachers by doing
      (Always from your branch).
-
-    	 $ git pull origin branch_name (use your actual branch name)
-
+```
+    	  git pull origin branch_name (use your actual branch name)
+```
    - When new files and labs are posted you can
      receive them by doing, always from your branch,
-
-    	 $ git pull origin master
-
+```
+    	  git pull origin master
+```
      
 ## Getting notebooks to run
 
