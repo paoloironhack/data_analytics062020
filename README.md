@@ -61,6 +61,8 @@ The teaching staff will visit the students’ branch and provide feedback on the
 ```
     	  git pull origin master
 ```
+
+A cheat sheet that summarizes the most important commands can be found [here](https://drive.google.com/file/d/1-Dc2r6tBMtbH4BoisMOKv1nvRZwGrWZc/view?usp=sharing)
      
 ## Getting notebooks to run
 
