@@ -26,26 +26,37 @@ The teaching staff will visit the students’ branch and provide feedback on the
      ```
       git checkout paolo
      ```
-  You will see the name of your branch next to the directory of the repository 
-  For example: /Documents/git/dataptams2020 (paolo)
+  If you are using Windows you will see the name of your branch next to the directory of the repository<br> 
+  For example: 
+  
+  ```
+  /git/dataptams2020 (paolo)
+  ```
+ In any case to check on which local branch you are you can do 
+ 
+  ```
+  git branch -lvv
+  ```
+ and you should see an asterisk next to the name of the branch on which you are working 
+ 
 
-## How to share your work with teaching staff and receive updates on labs and projects
+## How to submit your work and receive updates on labs and projects
 
-  - **You will work almost exclusively on your branch**. 
-     When you want to push your results to the remote repository, 
+ - **You will work almost exclusively on your branch**, so please make sure that you are on your branch. 
+ 
+ - When you want to push your results to the remote repository, to submit or modify your work, 
      after adding and committing the relevant files, do
      
 ```
     	  git push origin branch_name (use your actual branch name)
 ```
 
-   - You can update your branch, for example to view feedback 
-      given from the teachers by doing
+ - You can update your branch, for example to view feedback given from the teachers by doing
      (Always from your branch).
 ```
     	  git pull origin branch_name (use your actual branch name)
 ```
-   - When new files and labs are posted you can
+- When new files and labs are posted you can
      receive them by doing, always from your branch,
 ```
     	  git pull origin master
@@ -53,14 +64,17 @@ The teaching staff will visit the students’ branch and provide feedback on the
      
 ## Getting notebooks to run
 
-Our main tool to perform data analysis and present results is Jupyter Notebook.
+Our main tool to perform data analysis and present results is Jupyter Notebook
+ nd Jupyter Lab
 You should be able to start the notebook server by typing *jupyter lab* or *jupyter notebook*
 in command line.
+A Useful cheatsheet to work more effectively with the Jupyter notebook
+can be found [here](https://drive.google.com/open?id=1slPTN3g9bepzE84FA6rAHl0OZB_GRR8G)
 
 
 ## Important notes
 
-- We don't want to store data, presentations, figures on github. The general strategy will be to download
+We don't want to store data, presentations, figures on github. The general strategy will be to download
   the relevant data from our google drive to your local machine
   into the relevant data folder, usually suggested in the lab documentation, and work
   only locally with the data.
