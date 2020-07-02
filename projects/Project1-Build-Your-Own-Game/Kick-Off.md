@@ -20,19 +20,19 @@ You will also present your game to the class.
 ## Games
 You must come to an agreement with your colleagues so that each of you develops one of the following games:
 
-* [Strong Random Password Generator](https://strongpasswordgenerator.com/) (Pedro)
-* [Guess The Number](https://www.funbrain.com/games/guess-the-number) (Eva)
-* [Hangman](https://www.coolmathgames.com/0-hangman) (Zuzanna)
+* [Strong Random Password Generator](https://strongpasswordgenerator.com/) 
+* [Guess The Number](https://www.funbrain.com/games/guess-the-number) 
+* [Hangman](https://www.coolmathgames.com/0-hangman) 
 * [Message Encryption & Decryption](https://www.base64decode.org/)
-* [Mastermind](https://www.webgamesonline.com/mastermind/) (Imogen)
-* [Tic Tac Toe](https://www.google.com/search?q=tic+tac+toe&oq=tic+tac+toe&aqs=chrome..69i57j0l5.1876j0j4&sourceid=chrome&ie=UTF-8) (Maaike) 
+* [Mastermind](https://www.webgamesonline.com/mastermind/) 
+* [Tic Tac Toe](https://www.google.com/search?q=tic+tac+toe&oq=tic+tac+toe&aqs=chrome..69i57j0l5.1876j0j4&sourceid=chrome&ie=UTF-8) 
 * [Blackjack](https://bicyclecards.com/how-to-play/blackjack/)
 * [Soldier & Dice (Risk)](https://en.wikipedia.org/wiki/Risk_(game)#Attack_and_defense)
-* [Memory](https://www.webgamesonline.com/memory/) (Sreelatha)
+* [Memory](https://www.webgamesonline.com/memory/) 
 * [Solitaire](https://www.solitr.com/) 
-* [Minesweeper](http://minesweeperonline.com/) (Victor)
-* [Battleship](http://en.battleship-game.org/)  (Sara)
-* [Snap] (Andrea)
+* [Minesweeper](http://minesweeperonline.com/) 
+* [Battleship](http://en.battleship-game.org/) 
+
 
 Please feel free, however, to find a game yourself (subject to teachers' approval). 
 
