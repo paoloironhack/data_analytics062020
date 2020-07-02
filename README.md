@@ -64,11 +64,10 @@ The teaching staff will visit the students’ branch and provide feedback on the
      
 ## Getting notebooks to run
 
-Our main tool to perform data analysis and present results is Jupyter Notebook
- nd Jupyter Lab
+Our main tool to perform data analysis and present results is Jupyter Notebook and Jupyter Lab.
 You should be able to start the notebook server by typing *jupyter lab* or *jupyter notebook*
 in command line.
-A Useful cheatsheet to work more effectively with the Jupyter notebook
+A useful cheatsheet to work more effectively with the Jupyter notebook
 can be found [here](https://drive.google.com/open?id=1slPTN3g9bepzE84FA6rAHl0OZB_GRR8G)
 
 
