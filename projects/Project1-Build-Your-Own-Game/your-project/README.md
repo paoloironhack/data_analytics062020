@@ -1,7 +1,7 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
 # Title of Your Project
-*[Your Name]*
+*[Rianne Rendering]*
 
 *[Your Cohort, Campus & Date]*
 
@@ -29,6 +29,6 @@ What does your repository look like? Explain your folder and file structure.
 ## Links
 Include links to your repository, slides and kanban board. Feel free to include any other links associated with your project.
 
-[Repository](https://github.com/)  
+[Repository](https://github.com/Rianne89/project1)  
 [Slides](https://slides.com/)  
-[Trello](https://trello.com/en)  
+[Trello](https://trello.com/b/O44dFmHP/project-1-rianne)
