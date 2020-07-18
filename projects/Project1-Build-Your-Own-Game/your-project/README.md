@@ -1,9 +1,9 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
 # Title of Your Project
-*[Your Name]*
+*Elske den Bode*
 
-*[Your Cohort, Campus & Date]*
+*[DT, AMS & 18-07-2020]*
 
 ## Content
 - [Project Description](#project-description)
