@@ -1,6 +1,6 @@
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 
-# Title of Your Project
+# Project 1: Minesweeper
 *Elske den Bode*
 
 *[Data Analytics Part Time, AMS & 18-07-2020]*
