@@ -41,6 +41,6 @@ The repository contains one file with the code "minesweeper_game" and a README.m
 ## Links
 See the repository, presentation slides, and download link for processing.py to run the code below: 
 
-[Repository](https://github.com/)   (Will be added later)
-[Slides](https://slides.com/)  (Will be added later)
+[Repository](https://github.com/paoloironhack/data_analytics062020/blob/elske/projects/Project1-Build-Your-Own-Game/your-project/minesweeper_game.ipynb)
+[Slides](https://docs.google.com/presentation/d/1TMIuq_8s1c54ZHRZg5fkSPtTzEBHv_zmwTibtaPEp0c/edit?usp=sharing)
 [Processing.py](https://processing.org/download/)
