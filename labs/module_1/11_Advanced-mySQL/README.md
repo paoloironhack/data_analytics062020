@@ -22,7 +22,7 @@ In order to solve this problem, it is important for you to keep the following po
     * All advances, which are calculated exactly once for each title.
     * All royalties in each sale.
 
-Therefore, you will not be able to achieve the goal with a single *SELECT* query, you will need to use **subqueries**. Instead, you will need to follow several steps in order to achieve the solution. There is an overview of the steps below:
+Therefore, you will not be able to achieve the goal with a single *SELECT* query -- you will need to use **subqueries**. You will need to follow several steps in order to achieve the solution. There is an overview of the steps below:
 
 1. Calculate the royalty of each sale for each author and the advance for each author and publication.
 
@@ -72,7 +72,7 @@ Now that each title has exactly one row for each author where the advance and ro
 
 Sort the output based on a total profits from high to low, and limit the number of rows to 3.
 
-## Challenge 2 - Alternative Solution
+## Challenge 2 - Alternative Solution 
 
 In the previous challenge, you have developed your solution the following way:
 
