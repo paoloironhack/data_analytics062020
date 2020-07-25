@@ -59,6 +59,8 @@ group by au.au_id,au.au_lname,au.au_fname
 order by Total desc limit 3
 ;
 
+/* First solution to question 4 with temporary List*/
+
 create temporary table publications.sales_by_writer
 select  
 au.au_id,
@@ -87,6 +89,7 @@ from authors as au
 left join publications.sales_by_writer as sales 
 on au.`au_id` = sales.`au_id`;
 
+/* Second solution to question 4 with left Join*/
 
 select au.`au_id` as 'AUTHOER ID',
 au.`au_lname` as 'LAST NAME',
