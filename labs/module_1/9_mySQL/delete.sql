@@ -1,0 +1,2 @@
+USE sql7356922;
+DELETE FROM aline_cars WHERE ID= 4;
