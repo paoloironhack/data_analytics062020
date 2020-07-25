@@ -10,7 +10,7 @@ INSERT INTO Customers
 
 INSERT INTO Salespersons
         (Employee_ID, Name, Store)
-        VALUES (00001, 'Petey Cruiser', 'Madrid'), (00002, 'Anna Sthesia', 'Barcelona'), (00003, 'Paul Molive', 'Berlin'), (00004, 'Gail Forcewind', 'Paris'), (00005, 'Paige Turner', 'Mimia'), (00006, 'Bob Frapples', 'Mexico City'), (00007, 'Walter Melon', 'Amsterdam'), (00008, 'Shonda Leer', 'São Paulo');
+        VALUES (00001, 'Petey Cruiser', 'Madrid'), (00002, 'Anna Sthesia', 'Barcelona'), (00003, 'Paul Molive', 'Berlin'), (00004, 'Gail Forcewind', 'Paris'), (00005, 'Paige Turner', 'Miami'), (00006, 'Bob Frapples', 'Mexico City'), (00007, 'Walter Melon', 'Amsterdam'), (00008, 'Shonda Leer', 'São Paulo');
    
 INSERT INTO Invoices
       (Invoice_Nr, Date, Car, Customer, Salesperson)
