@@ -1,3 +1,6 @@
+#[tjerk] i only see create tables below (great though)
+#can you also show how you seeded and changed the content?
+
 create database lab_mysql;
 use lab_mysql;
 
