@@ -10,7 +10,7 @@ In this lab you will practice how to use the MySQL `SELECT` statement which will
 
 You will create a `solutions.sql` file in the `your-code` directory to record your solutions to all challenges.
 
-## Challenge 1 - Who Have Published What At Where?
+## Challenge 1 - Who Have Publijupyshed What At Where?
 
 In this challenge you will write a MySQL `SELECT` query that joins various tables to figure out what titles each author has published at which publishers. Your output should have at least the following columns:
 
