@@ -15,3 +15,5 @@ INSERT INTO Salespersons
 INSERT INTO Invoices
       (Invoice_Nr, Date, Car, Customer, Salesperson)
       VALUES (852399038, '2018-08-22', 0, 1, 3), (731166526, '2018-12-31', 3, 0, 5), (271135104, '2019-01-22', 2, 2, 7);
+
+# perfect
