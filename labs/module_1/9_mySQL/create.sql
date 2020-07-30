@@ -1,8 +1,15 @@
-#[tjerk] i only see create tables below (great though)
-#can you also show how you seeded and changed the content?
+
+
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+DROP DATABASE if exists lab_mysql;
 
 create database lab_mysql;
+
 use lab_mysql;
+
 
 
 CREATE TABLE `Cars` (
@@ -12,7 +19,7 @@ CREATE TABLE `Cars` (
   `Model` varchar(40) DEFAULT NULL,
   `Year` int(4) DEFAULT NULL,
   `color` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) AUTO_INCREMENT=0,ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE `Customers` (
@@ -21,21 +28,22 @@ CREATE TABLE `Customers` (
   `Name` varchar(60) NOT NULL,
   `Phone` VARCHAR(40) DEFAult null, 
   `Email` varchar(40) DEFAULT NULL,
-  `Address` VARCHAR(60) DEFAult null, 
-  `City` varchar(60) DEFAULT NULL,
+  `Address` VARCHAR(60) DEFAult null,
+  `City` varchar(60) DEFAULT NULL,	
   `State/Province` varchar(60) DEFAULT NULL,
+  `Country` varchar(60) DEFAULT NULL,
   `Postal` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) AUTO_INCREMENT=0,ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 /* INSERT INTO `Cars` */
 
 CREATE TABLE `Salespersons` (
   `ID` int(6) AUTO_INCREMENT primary key,
-  `Staff ID` int(5) NOT NULL,
+  `Staff ID` int(5) zerofill NOT NULL,
   `Name` varchar(60) NOT NULL,
   `Store` VARCHAR(40) DEFAult null
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) AUTO_INCREMENT=0,ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Invoices` (
   `ID` int(6) AUTO_INCREMENT primary key,
@@ -45,7 +53,5 @@ CREATE TABLE `Invoices` (
   `Customer` int(4) NOT NULL,
   `Sales Person` int(4) NOT NULL
   
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) AUTO_INCREMENT=0,ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-/* drop database Lukas; */
