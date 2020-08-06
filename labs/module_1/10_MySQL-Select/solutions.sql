@@ -48,3 +48,8 @@ ON titles.title_id = sales.title_id
 GROUP BY titles.title_id, authors.au_id
 ORDER BY TOTAL DESC;
 
+
+/* Hoi Elke, 
+Goed gedaan, vergeet niet je joins te specificeren, meestal kun je een LEFT join gebruiken, je hebt
+met de opdracht niet laten zien of je dit beheers. maar ik zie het door de vingers als we afspreken dat
+jij nog even de verschillende type joins bestudeerd. is dat ok? */
