@@ -1,0 +1,625 @@
+| 9952   | Scootney Books        | New York   | NY    | USA     |
+| 9999   | Lucerne Publishing    | Paris      | NULL  | France  |
++--------+-----------------------+------------+-------+---------+
+8 rows in set (0.01 sec)
+
+mysql> SELECT pub_id, title_id, title, type, price FROM publications.titles;
++--------+----------+-----------------------------------------------------------------+--------------+---------+
+| pub_id | title_id | title                                                           | type         | price   |
++--------+----------+-----------------------------------------------------------------+--------------+---------+
+| 1389   | BU1032   | The Busy Executive's Database Guide                             | business     | 19.9900 |
+| 1389   | BU1111   | Cooking with Computers: Surreptitious Balance Sheets            | business     | 11.9500 |
+| 0736   | BU2075   | You Can Combat Computer Stress!                                 | business     |  2.9900 |
+| 1389   | BU7832   | Straight Talk About Computers                                   | business     | 19.9900 |
+| 0877   | MC2222   | Silicon Valley Gastronomic Treats                               | mod_cook     | 19.9900 |
+| 0877   | MC3021   | The Gourmet Microwave                                           | mod_cook     |  2.9900 |
+| 0877   | MC3026   | The Psychology of Computer Cooking                              | UNDECIDED    |    NULL |
+| 1389   | PC1035   | But Is It User Friendly?                                        | popular_comp | 22.9500 |
+| 1389   | PC8888   | Secrets of Silicon Valley                                       | popular_comp | 20.0000 |
+| 1389   | PC9999   | Net Etiquette                                                   | popular_comp |    NULL |
+| 0877   | PS1372   | Computer Phobic AND Non-Phobic Individuals: Behavior Variations | psychology   | 21.5900 |
+| 0736   | PS2091   | Is Anger the Enemy?                                             | psychology   | 10.9500 |
+| 0736   | PS2106   | Life Without Fear                                               | psychology   |  7.0000 |
+| 0736   | PS3333   | Prolonged Data Deprivation: Four Case Studies                   | psychology   | 19.9900 |
+| 0736   | PS7777   | Emotional Security: A New Algorithm                             | psychology   |  7.9900 |
+| 0877   | TC3218   | Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean | trad_cook    | 20.9500 |
+| 0877   | TC4203   | Fifty Years in Buckingham Palace Kitchens                       | trad_cook    | 11.9500 |
+| 0877   | TC7777   | Sushi, Anyone?                                                  | trad_cook    | 14.9900 |
++--------+----------+-----------------------------------------------------------------+--------------+---------+
+18 rows in set (0.00 sec)
+
+mysql> exit;
+Bye
+(base) Louks-MacBook-Pro:MySQL louksmalbil$ clear
+
+(base) Louks-MacBook-Pro:MySQL louksmalbil$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 45
+Server version: 8.0.19 Homebrew
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE publications;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT stor_id, qty - (SELECT AVG(qty) FROM sales) AS DevFromAvg FROM sales
+    -> ;
++---------+------------+
+| stor_id | DevFromAvg |
++---------+------------+
+| 6380    |   -18.4762 |
+| 6380    |   -20.4762 |
+| 7066    |    26.5238 |
+| 7066    |    51.5238 |
+| 7067    |   -13.4762 |
+| 7067    |    16.5238 |
+| 7067    |    -3.4762 |
+| 7067    |    -3.4762 |
+| 7131    |    -3.4762 |
+| 7131    |     1.5238 |
+| 7131    |    -3.4762 |
+| 7131    |     1.5238 |
+| 7131    |    -8.4762 |
+| 7131    |     1.5238 |
+| 7896    |    -8.4762 |
+| 7896    |   -13.4762 |
+| 7896    |    11.5238 |
+| 8042    |    -8.4762 |
+| 8042    |   -13.4762 |
+| 8042    |     1.5238 |
+| 8042    |     6.5238 |
++---------+------------+
+21 rows in set (0.00 sec)
+
+mysql> SELECT stor_id, qty FROM sales;
++---------+-----+
+| stor_id | qty |
++---------+-----+
+| 6380    |   5 |
+| 6380    |   3 |
+| 7066    |  50 |
+| 7066    |  75 |
+| 7067    |  10 |
+| 7067    |  40 |
+| 7067    |  20 |
+| 7067    |  20 |
+| 7131    |  20 |
+| 7131    |  25 |
+| 7131    |  20 |
+| 7131    |  25 |
+| 7131    |  15 |
+| 7131    |  25 |
+| 7896    |  15 |
+| 7896    |  10 |
+| 7896    |  35 |
+| 8042    |  15 |
+| 8042    |  10 |
+| 8042    |  25 |
+| 8042    |  30 |
++---------+-----+
+21 rows in set (0.00 sec)
+
+mysql> SELECT AVG(qty) FROM sales;
++----------+
+| AVG(qty) |
++----------+
+|  23.4762 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT stor_id, qty FROM sales;
++---------+-----+
+| stor_id | qty |
++---------+-----+
+| 6380    |   5 |
+| 6380    |   3 |
+| 7066    |  50 |
+| 7066    |  75 |
+| 7067    |  10 |
+| 7067    |  40 |
+| 7067    |  20 |
+| 7067    |  20 |
+| 7131    |  20 |
+| 7131    |  25 |
+| 7131    |  20 |
+| 7131    |  25 |
+| 7131    |  15 |
+| 7131    |  25 |
+| 7896    |  15 |
+| 7896    |  10 |
+| 7896    |  35 |
+| 8042    |  15 |
+| 8042    |  10 |
+| 8042    |  25 |
+| 8042    |  30 |
++---------+-----+
+21 rows in set (0.00 sec)
+
+mysql> SELECT * FROM sales;
++---------+----------+---------------------+-----+------------+----------+
+| stor_id | ord_num  | ord_date            | qty | payterms   | title_id |
++---------+----------+---------------------+-----+------------+----------+
+| 6380    | 6871     | 1994-09-14 00:00:00 |   5 | Net 60     | BU1032   |
+| 6380    | 722a     | 1994-09-13 00:00:00 |   3 | Net 60     | PS2091   |
+| 7066    | A2976    | 1993-05-24 00:00:00 |  50 | Net 30     | PC8888   |
+| 7066    | QA7442.3 | 1994-09-13 00:00:00 |  75 | ON invoice | PS2091   |
+| 7067    | D4482    | 1994-09-14 00:00:00 |  10 | Net 60     | PS2091   |
+| 7067    | P2121    | 1992-06-15 00:00:00 |  40 | Net 30     | TC3218   |
+| 7067    | P2121    | 1992-06-15 00:00:00 |  20 | Net 30     | TC4203   |
+| 7067    | P2121    | 1992-06-15 00:00:00 |  20 | Net 30     | TC7777   |
+| 7131    | N914008  | 1994-09-14 00:00:00 |  20 | Net 30     | PS2091   |
+| 7131    | N914014  | 1994-09-14 00:00:00 |  25 | Net 30     | MC3021   |
+| 7131    | P3087a   | 1993-05-29 00:00:00 |  20 | Net 60     | PS1372   |
+| 7131    | P3087a   | 1993-05-29 00:00:00 |  25 | Net 60     | PS2106   |
+| 7131    | P3087a   | 1993-05-29 00:00:00 |  15 | Net 60     | PS3333   |
+| 7131    | P3087a   | 1993-05-29 00:00:00 |  25 | Net 60     | PS7777   |
+| 7896    | QQ2299   | 1993-10-28 00:00:00 |  15 | Net 60     | BU7832   |
+| 7896    | TQ456    | 1993-12-12 00:00:00 |  10 | Net 60     | MC2222   |
+| 7896    | X999     | 1993-02-21 00:00:00 |  35 | ON invoice | BU2075   |
+| 8042    | 423LL922 | 1994-09-14 00:00:00 |  15 | ON invoice | MC3021   |
+| 8042    | 423LL930 | 1994-09-14 00:00:00 |  10 | ON invoice | BU1032   |
+| 8042    | P723     | 1993-03-11 00:00:00 |  25 | Net 30     | BU1111   |
+| 8042    | QA879.1  | 1993-05-22 00:00:00 |  30 | Net 30     | PC1035   |
++---------+----------+---------------------+-----+------------+----------+
+21 rows in set (0.00 sec)
+
+mysql> SELECT stor_id, qty FROM sales;
++---------+-----+
+| stor_id | qty |
++---------+-----+
+| 6380    |   5 |
+| 6380    |   3 |
+| 7066    |  50 |
+| 7066    |  75 |
+| 7067    |  10 |
+| 7067    |  40 |
+| 7067    |  20 |
+| 7067    |  20 |
+| 7131    |  20 |
+| 7131    |  25 |
+| 7131    |  20 |
+| 7131    |  25 |
+| 7131    |  15 |
+| 7131    |  25 |
+| 7896    |  15 |
+| 7896    |  10 |
+| 7896    |  35 |
+| 8042    |  15 |
+| 8042    |  10 |
+| 8042    |  25 |
+| 8042    |  30 |
++---------+-----+
+21 rows in set (0.00 sec)
+
+mysql> SELECT payterms FROM sales WHERE payterms = "Net 60";
++----------+
+| payterms |
++----------+
+| Net 60   |
+| Net 60   |
+| Net 60   |
+| Net 60   |
+| Net 60   |
+| Net 60   |
+| Net 60   |
+| Net 60   |
+| Net 60   |
++----------+
+9 rows in set (0.00 sec)
+
+mysql> SELECT * FROM sales WHERE payterms IN (SELECT payterms FROM sales WHERE payterms = "Net 60");
++---------+---------+---------------------+-----+----------+----------+
+| stor_id | ord_num | ord_date            | qty | payterms | title_id |
++---------+---------+---------------------+-----+----------+----------+
+| 6380    | 6871    | 1994-09-14 00:00:00 |   5 | Net 60   | BU1032   |
+| 6380    | 722a    | 1994-09-13 00:00:00 |   3 | Net 60   | PS2091   |
+| 7067    | D4482   | 1994-09-14 00:00:00 |  10 | Net 60   | PS2091   |
+| 7131    | P3087a  | 1993-05-29 00:00:00 |  20 | Net 60   | PS1372   |
+| 7131    | P3087a  | 1993-05-29 00:00:00 |  25 | Net 60   | PS2106   |
+| 7131    | P3087a  | 1993-05-29 00:00:00 |  15 | Net 60   | PS3333   |
+| 7131    | P3087a  | 1993-05-29 00:00:00 |  25 | Net 60   | PS7777   |
+| 7896    | QQ2299  | 1993-10-28 00:00:00 |  15 | Net 60   | BU7832   |
+| 7896    | TQ456   | 1993-12-12 00:00:00 |  10 | Net 60   | MC2222   |
++---------+---------+---------------------+-----+----------+----------+
+9 rows in set (0.00 sec)
+
+mysql> SELECT * FROM sales;
++---------+----------+---------------------+-----+------------+----------+
+| stor_id | ord_num  | ord_date            | qty | payterms   | title_id |
++---------+----------+---------------------+-----+------------+----------+
+| 6380    | 6871     | 1994-09-14 00:00:00 |   5 | Net 60     | BU1032   |
+| 6380    | 722a     | 1994-09-13 00:00:00 |   3 | Net 60     | PS2091   |
+| 7066    | A2976    | 1993-05-24 00:00:00 |  50 | Net 30     | PC8888   |
+| 7066    | QA7442.3 | 1994-09-13 00:00:00 |  75 | ON invoice | PS2091   |
+| 7067    | D4482    | 1994-09-14 00:00:00 |  10 | Net 60     | PS2091   |
+| 7067    | P2121    | 1992-06-15 00:00:00 |  40 | Net 30     | TC3218   |
+| 7067    | P2121    | 1992-06-15 00:00:00 |  20 | Net 30     | TC4203   |
+| 7067    | P2121    | 1992-06-15 00:00:00 |  20 | Net 30     | TC7777   |
+| 7131    | N914008  | 1994-09-14 00:00:00 |  20 | Net 30     | PS2091   |
+| 7131    | N914014  | 1994-09-14 00:00:00 |  25 | Net 30     | MC3021   |
+| 7131    | P3087a   | 1993-05-29 00:00:00 |  20 | Net 60     | PS1372   |
+| 7131    | P3087a   | 1993-05-29 00:00:00 |  25 | Net 60     | PS2106   |
+| 7131    | P3087a   | 1993-05-29 00:00:00 |  15 | Net 60     | PS3333   |
+| 7131    | P3087a   | 1993-05-29 00:00:00 |  25 | Net 60     | PS7777   |
+| 7896    | QQ2299   | 1993-10-28 00:00:00 |  15 | Net 60     | BU7832   |
+| 7896    | TQ456    | 1993-12-12 00:00:00 |  10 | Net 60     | MC2222   |
+| 7896    | X999     | 1993-02-21 00:00:00 |  35 | ON invoice | BU2075   |
+| 8042    | 423LL922 | 1994-09-14 00:00:00 |  15 | ON invoice | MC3021   |
+| 8042    | 423LL930 | 1994-09-14 00:00:00 |  10 | ON invoice | BU1032   |
+| 8042    | P723     | 1993-03-11 00:00:00 |  25 | Net 30     | BU1111   |
+| 8042    | QA879.1  | 1993-05-22 00:00:00 |  30 | Net 30     | PC1035   |
++---------+----------+---------------------+-----+------------+----------+
+21 rows in set (0.00 sec)
+
+mysql> SELECT * FROM sales WHERE payterms IN (SELECT payterms FROM sales WHERE payterms = "Net 60");
++---------+---------+---------------------+-----+----------+----------+
+| stor_id | ord_num | ord_date            | qty | payterms | title_id |
++---------+---------+---------------------+-----+----------+----------+
+| 6380    | 6871    | 1994-09-14 00:00:00 |   5 | Net 60   | BU1032   |
+| 6380    | 722a    | 1994-09-13 00:00:00 |   3 | Net 60   | PS2091   |
+| 7067    | D4482   | 1994-09-14 00:00:00 |  10 | Net 60   | PS2091   |
+| 7131    | P3087a  | 1993-05-29 00:00:00 |  20 | Net 60   | PS1372   |
+| 7131    | P3087a  | 1993-05-29 00:00:00 |  25 | Net 60   | PS2106   |
+| 7131    | P3087a  | 1993-05-29 00:00:00 |  15 | Net 60   | PS3333   |
+| 7131    | P3087a  | 1993-05-29 00:00:00 |  25 | Net 60   | PS7777   |
+| 7896    | QQ2299  | 1993-10-28 00:00:00 |  15 | Net 60   | BU7832   |
+| 7896    | TQ456   | 1993-12-12 00:00:00 |  10 | Net 60   | MC2222   |
++---------+---------+---------------------+-----+----------+----------+
+9 rows in set (0.00 sec)
+
+mysql> SELECT title, title_id FROM titles WHERE title_id IN (SELECT title_id FROM sales WHERE qty > 30);
++-----------------------------------------------------------------+----------+
+| title                                                           | title_id |
++-----------------------------------------------------------------+----------+
+| Secrets of Silicon Valley                                       | PC8888   |
+| Is Anger the Enemy?                                             | PS2091   |
+| Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean | TC3218   |
+| You Can Combat Computer Stress!                                 | BU2075   |
++-----------------------------------------------------------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT pub_name FROM (
+    -> SELECT publishers.pub_name, COUNT(titles.title_id) 
+    -> FROM  publications.publishers 
+    -> RIGHT JOIN publications.titles 
+    -> ON titles.pub_id = publishers.pub_id 
+    -> GROUP BY pub_name)
+    -> AS Name_of_Publishers
+    -> ;
++----------------------+
+| pub_name             |
++----------------------+
+| New Moon Books       |
+| Binnet & Hardley     |
+| Algodata Infosystems |
++----------------------+
+3 rows in set (0.01 sec)
+
+mysql> SELECT publishers.pub_name, COUNT(titles.title_id) 
+    -> FROM  publications.publishers 
+    -> RIGHT JOIN publications.titles 
+    -> ON titles.pub_id = publishers.pub_id 
+    -> GROUP BY pub_name)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 5
+mysql> SELECT publishers.pub_name, COUNT(titles.title_id) 
+    -> FROM  publications.publishers 
+    -> RIGHT JOIN publications.titles 
+    -> ON titles.pub_id = publishers.pub_id 
+    -> GROUP BY pub_name
+    -> ;
++----------------------+------------------------+
+| pub_name             | COUNT(titles.title_id) |
++----------------------+------------------------+
+| New Moon Books       |                      5 |
+| Binnet & Hardley     |                      7 |
+| Algodata Infosystems |                      6 |
++----------------------+------------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT pub_name FROM ( SELECT publishers.pub_name, COUNT(titles.title_id)  FROM  publications.publishers  RIGHT JOIN publications.titles  ON titles.pub_id = publishers.pub_id  GROUP BY pub_name) AS Name_of_Publishers;
++----------------------+
+| pub_name             |
++----------------------+
+| New Moon Books       |
+| Binnet & Hardley     |
+| Algodata Infosystems |
++----------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT pub_name FROM ( SELECT publishers.pub_name, COUNT(titles.title_id)  FROM  publications.publishers  RIGHT JOIN publications.titles  ON titles.pub_id = publishers.pub_id  GROUP BY pub_name);
+ERROR 1248 (42000): Every derived table must have its own alias
+mysql> SELECT pub_name AS NameofPublish FROM ( SELECT publishers.pub_name, COUNT(titles.title_id)  FROM  publications.publishers  RIGHT JOIN publications.titles  ON titles.pub_id = publishers.pub_id  GROUP BY pub_name) AS Name_of_Publishers;
++----------------------+
+| NameofPublish        |
++----------------------+
+| New Moon Books       |
+| Binnet & Hardley     |
+| Algodata Infosystems |
++----------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT title AS Title, pub_id AS PubID FROM (
+    -> SELECT titles.title, publishers.pub_name, publishers.pub_id 
+    -> FROM publications.titles 
+    -> RIGHT JOIN publications.publishers 
+    -> ON publishers.pub_id = titles.pub_id 
+    -> 
+    -> UNION 
+    -> 
+    -> SELECT titles.title, publishers.pub_name, publishers.pub_id 
+    -> FROM publications.titles 
+    -> LEFT JOIN publications.publishers 
+    -> ON publishers.pub_id = titles.pub_id
+    -> )
+    -> AS Pub
+    -> ;
++-----------------------------------------------------------------+-------+
+| Title                                                           | PubID |
++-----------------------------------------------------------------+-------+
+| You Can Combat Computer Stress!                                 | 0736  |
+| Is Anger the Enemy?                                             | 0736  |
+| Life Without Fear                                               | 0736  |
+| Prolonged Data Deprivation: Four Case Studies                   | 0736  |
+| Emotional Security: A New Algorithm                             | 0736  |
+| Silicon Valley Gastronomic Treats                               | 0877  |
+| The Gourmet Microwave                                           | 0877  |
+| The Psychology of Computer Cooking                              | 0877  |
+| Computer Phobic AND Non-Phobic Individuals: Behavior Variations | 0877  |
+| Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean | 0877  |
+| Fifty Years in Buckingham Palace Kitchens                       | 0877  |
+| Sushi, Anyone?                                                  | 0877  |
+| The Busy Executive's Database Guide                             | 1389  |
+| Cooking with Computers: Surreptitious Balance Sheets            | 1389  |
+| Straight Talk About Computers                                   | 1389  |
+| But Is It User Friendly?                                        | 1389  |
+| Secrets of Silicon Valley                                       | 1389  |
+| Net Etiquette                                                   | 1389  |
+| NULL                                                            | 1622  |
+| NULL                                                            | 1756  |
+| NULL                                                            | 9901  |
+| NULL                                                            | 9952  |
+| NULL                                                            | 9999  |
++-----------------------------------------------------------------+-------+
+23 rows in set (0.01 sec)
+
+mysql> SELECT titles.title, publishers.pub_name, publishers.pub_id 
+    -> FROM publications.titles 
+    -> RIGHT JOIN publications.publishers 
+    -> ON publishers.pub_id = titles.pub_id 
+    -> 
+    -> UNION 
+    -> 
+    -> SELECT titles.title, publishers.pub_name, publishers.pub_id 
+    -> FROM publications.titles 
+    -> LEFT JOIN publications.publishers 
+    -> ON publishers.pub_id = titles.pub_id
+    -> )
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 12
+mysql> SELECT titles.title, publishers.pub_name, publishers.pub_id  FROM publications.titles  RIGHT JOIN publications.publishers  ON publishers.pub_id = titles.pub_id   UNION   SELECT titles.title, publishers.pub_name, publishers.pub_id  FROM publications.titles  LEFT JOIN publications.publishers  ON publishers.pub_id = titles.pub_id;
++-----------------------------------------------------------------+-----------------------+--------+
+| title                                                           | pub_name              | pub_id |
++-----------------------------------------------------------------+-----------------------+--------+
+| You Can Combat Computer Stress!                                 | New Moon Books        | 0736   |
+| Is Anger the Enemy?                                             | New Moon Books        | 0736   |
+| Life Without Fear                                               | New Moon Books        | 0736   |
+| Prolonged Data Deprivation: Four Case Studies                   | New Moon Books        | 0736   |
+| Emotional Security: A New Algorithm                             | New Moon Books        | 0736   |
+| Silicon Valley Gastronomic Treats                               | Binnet & Hardley      | 0877   |
+| The Gourmet Microwave                                           | Binnet & Hardley      | 0877   |
+| The Psychology of Computer Cooking                              | Binnet & Hardley      | 0877   |
+| Computer Phobic AND Non-Phobic Individuals: Behavior Variations | Binnet & Hardley      | 0877   |
+| Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean | Binnet & Hardley      | 0877   |
+| Fifty Years in Buckingham Palace Kitchens                       | Binnet & Hardley      | 0877   |
+| Sushi, Anyone?                                                  | Binnet & Hardley      | 0877   |
+| The Busy Executive's Database Guide                             | Algodata Infosystems  | 1389   |
+| Cooking with Computers: Surreptitious Balance Sheets            | Algodata Infosystems  | 1389   |
+| Straight Talk About Computers                                   | Algodata Infosystems  | 1389   |
+| But Is It User Friendly?                                        | Algodata Infosystems  | 1389   |
+| Secrets of Silicon Valley                                       | Algodata Infosystems  | 1389   |
+| Net Etiquette                                                   | Algodata Infosystems  | 1389   |
+| NULL                                                            | Five Lakes Publishing | 1622   |
+| NULL                                                            | Ramona Publishers     | 1756   |
+| NULL                                                            | GGG&G                 | 9901   |
+| NULL                                                            | Scootney Books        | 9952   |
+| NULL                                                            | Lucerne Publishing    | 9999   |
++-----------------------------------------------------------------+-----------------------+--------+
+23 rows in set (0.00 sec)
+
+mysql> )
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> SELECT title AS Title, pub_id AS PubID FROM (
+    -> SELECT titles.title, publishers.pub_name, publishers.pub_id 
+    -> FROM publications.titles 
+    -> RIGHT JOIN publications.publishers 
+    -> ON publishers.pub_id = titles.pub_id 
+    -> 
+    -> UNION 
+    -> 
+    -> SELECT titles.title, publishers.pub_name, publishers.pub_id 
+    -> FROM publications.titles 
+    -> LEFT JOIN publications.publishers 
+    -> ON publishers.pub_id = titles.pub_id
+    -> )
+    -> AS Pub;
++-----------------------------------------------------------------+-------+
+| Title                                                           | PubID |
++-----------------------------------------------------------------+-------+
+| You Can Combat Computer Stress!                                 | 0736  |
+| Is Anger the Enemy?                                             | 0736  |
+| Life Without Fear                                               | 0736  |
+| Prolonged Data Deprivation: Four Case Studies                   | 0736  |
+| Emotional Security: A New Algorithm                             | 0736  |
+| Silicon Valley Gastronomic Treats                               | 0877  |
+| The Gourmet Microwave                                           | 0877  |
+| The Psychology of Computer Cooking                              | 0877  |
+| Computer Phobic AND Non-Phobic Individuals: Behavior Variations | 0877  |
+| Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean | 0877  |
+| Fifty Years in Buckingham Palace Kitchens                       | 0877  |
+| Sushi, Anyone?                                                  | 0877  |
+| The Busy Executive's Database Guide                             | 1389  |
+| Cooking with Computers: Surreptitious Balance Sheets            | 1389  |
+| Straight Talk About Computers                                   | 1389  |
+| But Is It User Friendly?                                        | 1389  |
+| Secrets of Silicon Valley                                       | 1389  |
+| Net Etiquette                                                   | 1389  |
+| NULL                                                            | 1622  |
+| NULL                                                            | 1756  |
+| NULL                                                            | 9901  |
+| NULL                                                            | 9952  |
+| NULL                                                            | 9999  |
++-----------------------------------------------------------------+-------+
+23 rows in set (0.00 sec)
+
+mysql> SELECT Store, Items/Orders AS AvgItems, Qty/Items AS AvgQty                                                                                      
+    -> FROM (
+    ->     SELECT stores.stor_name AS Store, COUNT(DISTINCT(ord_num)) AS Orders, COUNT(title_id) AS Items,   SUM(qty) AS Qty
+    ->     FROM publications.sales 
+    ->     INNER JOIN publications.stores ON stores.stor_id = sales.stor_id
+    ->     GROUP BY Store
+    -> ) AS summary
+    -> ;
++--------------------------------------+----------+---------+
+| Store                                | AvgItems | AvgQty  |
++--------------------------------------+----------+---------+
+| Barnum's                             |   1.0000 | 62.5000 |
+| Bookbeat                             |   1.0000 | 20.0000 |
+| Doc-U-Mat: Quality Laundry and Books |   2.0000 | 21.6667 |
+| Eric the Read Books                  |   1.0000 |  4.0000 |
+| Fricative Bookshop                   |   1.0000 | 20.0000 |
+| News & Brews                         |   2.0000 | 22.5000 |
++--------------------------------------+----------+---------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT stores.stor_name AS Store, COUNT(DISTINCT(ord_num)) AS Orders, COUNT(title_id) AS Items,   SUM(qty) AS Qty
+    ->     FROM publications.sales 
+    ->     INNER JOIN publications.stores ON stores.stor_id = sales.stor_id
+    ->     GROUP BY Store
+    -> ;
++--------------------------------------+--------+-------+------+
+| Store                                | Orders | Items | Qty  |
++--------------------------------------+--------+-------+------+
+| Barnum's                             |      2 |     2 |  125 |
+| Bookbeat                             |      4 |     4 |   80 |
+| Doc-U-Mat: Quality Laundry and Books |      3 |     6 |  130 |
+| Eric the Read Books                  |      2 |     2 |    8 |
+| Fricative Bookshop                   |      3 |     3 |   60 |
+| News & Brews                         |      2 |     4 |   90 |
++--------------------------------------+--------+-------+------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT Store, Items/Orders AS AvgItems, Qty/Items AS AvgQty FROM (     SELECT stores.stor_name AS Store, COUNT(DISTINCT(ord_num)) AS Orders, COUNT(title_id) AS Items,   SUM(qty) AS Qty     FROM publications.sales      INNER JOIN publications.stores ON stores.stor_id = sales.stor_id     GROUP BY Store ) AS summary;
++--------------------------------------+----------+---------+
+| Store                                | AvgItems | AvgQty  |
++--------------------------------------+----------+---------+
+| Barnum's                             |   1.0000 | 62.5000 |
+| Bookbeat                             |   1.0000 | 20.0000 |
+| Doc-U-Mat: Quality Laundry and Books |   2.0000 | 21.6667 |
+| Eric the Read Books                  |   1.0000 |  4.0000 |
+| Fricative Bookshop                   |   1.0000 | 20.0000 |
+| News & Brews                         |   2.0000 | 22.5000 |
++--------------------------------------+----------+---------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT Store, ord_num AS OrderNumber, ord_date AS OrderDate, title AS Title, sales.qty AS Qty, price AS Price, type as Type
+    -> FROM (
+    -> SELECT stores.stor_id AS StoreID, stores.stor_name AS Store,  COUNT(DISTINCT(ord_num)) AS  Orders, COUNT(title_id) AS Items, SUM(qty) AS Qty
+    -> FROM publications.sales 
+    -> INNER JOIN publications.stores ON stores.stor_id = sales.stor_id
+    -> GROUP BY StoreID, Store
+    -> ) AS summary
+    -> INNER JOIN publications.sales ON summary.StoreID = sales.stor_id
+    -> INNER JOIN publications.titles ON sales.title_id = titles.title_id
+    -> WHERE Items / Orders > 1
+    -> ;
++--------------------------------------+-------------+---------------------+-----------------------------------------------------------------+-----+---------+------------+
+| Store                                | OrderNumber | OrderDate           | Title                                                           | Qty | Price   | Type       |
++--------------------------------------+-------------+---------------------+-----------------------------------------------------------------+-----+---------+------------+
+| News & Brews                         | D4482       | 1994-09-14 00:00:00 | Is Anger the Enemy?                                             |  10 | 10.9500 | psychology |
+| News & Brews                         | P2121       | 1992-06-15 00:00:00 | Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean |  40 | 20.9500 | trad_cook  |
+| News & Brews                         | P2121       | 1992-06-15 00:00:00 | Fifty Years in Buckingham Palace Kitchens                       |  20 | 11.9500 | trad_cook  |
+| News & Brews                         | P2121       | 1992-06-15 00:00:00 | Sushi, Anyone?                                                  |  20 | 14.9900 | trad_cook  |
+| Doc-U-Mat: Quality Laundry and Books | N914008     | 1994-09-14 00:00:00 | Is Anger the Enemy?                                             |  20 | 10.9500 | psychology |
+| Doc-U-Mat: Quality Laundry and Books | N914014     | 1994-09-14 00:00:00 | The Gourmet Microwave                                           |  25 |  2.9900 | mod_cook   |
+| Doc-U-Mat: Quality Laundry and Books | P3087a      | 1993-05-29 00:00:00 | Computer Phobic AND Non-Phobic Individuals: Behavior Variations |  20 | 21.5900 | psychology |
+| Doc-U-Mat: Quality Laundry and Books | P3087a      | 1993-05-29 00:00:00 | Life Without Fear                                               |  25 |  7.0000 | psychology |
+| Doc-U-Mat: Quality Laundry and Books | P3087a      | 1993-05-29 00:00:00 | Prolonged Data Deprivation: Four Case Studies                   |  15 | 19.9900 | psychology |
+| Doc-U-Mat: Quality Laundry and Books | P3087a      | 1993-05-29 00:00:00 | Emotional Security: A New Algorithm                             |  25 |  7.9900 | psychology |
++--------------------------------------+-------------+---------------------+-----------------------------------------------------------------+-----+---------+------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT stores.stor_id AS StoreID, stores.stor_name AS Store,  COUNT(DISTINCT(ord_num)) AS  Orders, COUNT(title_id) AS Items, SUM(qty) AS Qty
+    -> FROM publications.sales 
+    -> INNER JOIN publications.stores ON stores.stor_id = sales.stor_id
+    -> GROUP BY StoreID, Store
+    -> ;
++---------+--------------------------------------+--------+-------+------+
+| StoreID | Store                                | Orders | Items | Qty  |
++---------+--------------------------------------+--------+-------+------+
+| 6380    | Eric the Read Books                  |      2 |     2 |    8 |
+| 7066    | Barnum's                             |      2 |     2 |  125 |
+| 7067    | News & Brews                         |      2 |     4 |   90 |
+| 7131    | Doc-U-Mat: Quality Laundry and Books |      3 |     6 |  130 |
+| 7896    | Fricative Bookshop                   |      3 |     3 |   60 |
+| 8042    | Bookbeat                             |      4 |     4 |   80 |
++---------+--------------------------------------+--------+-------+------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT Store, ord_num AS OrderNumber, ord_date AS OrderDate, title AS Title, sales.qty AS Qty, price AS Price, type as Type FROM ( SELECT stores.stor_id AS StoreID, stores.stor_name AS Store,  COUNT(DISTINCT(ord_num)) AS  Orders, COUNT(title_id) AS Items, SUM(qty) AS Qty FROM publications.sales  INNER JOIN publications.stores ON stores.stor_id = sales.stor_id GROUP BY StoreID, Store ) AS summary INNER JOIN publications.titles ON sales.title_id = titles.title_id WHERE Items / Orders > 1;
+ERROR 1054 (42S22): Unknown column 'ord_num' in 'field list'
+mysql> CREATE TEMPORARY TABLE publications.store_sales_summary                                                                                                                                      -> SELECT stores.stor_id AS StoreID, stores.stor_name AS Store, COUNT(DISTINCT(ord_num)) AS Orders, COUNT(title_id) AS Items, SUM(qty) AS Qty
+    -> FROM publications.sales 
+    -> INNER JOIN publications.stores 
+    -> ON stores.stor_id = sales.stor_id
+    -> GROUP BY StoreID, Store
+    -> ;
+Query OK, 6 rows affected (0.01 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM store_sales_summary;
++---------+--------------------------------------+--------+-------+------+
+| StoreID | Store                                | Orders | Items | Qty  |
++---------+--------------------------------------+--------+-------+------+
+| 6380    | Eric the Read Books                  |      2 |     2 |    8 |
+| 7066    | Barnum's                             |      2 |     2 |  125 |
+| 7067    | News & Brews                         |      2 |     4 |   90 |
+| 7131    | Doc-U-Mat: Quality Laundry and Books |      3 |     6 |  130 |
+| 7896    | Fricative Bookshop                   |      3 |     3 |   60 |
+| 8042    | Bookbeat                             |      4 |     4 |   80 |
++---------+--------------------------------------+--------+-------+------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT Store, ord_num AS OrderNumber, ord_date AS OrderDate, title AS Title, sales.qty AS Qty, price AS Price, type as Type
+    -> FROM publications.store_sales_summary summary
+    -> INNER JOIN publications.sales sales ON summary.StoreID = sales.stor_id
+    -> INNER JOIN publications.titles ON sales.title_id = titles.title_id
+    -> WHERE Items / Orders > 1
+    -> ;
++--------------------------------------+-------------+---------------------+-----------------------------------------------------------------+-----+---------+------------+
+| Store                                | OrderNumber | OrderDate           | Title                                                           | Qty | Price   | Type       |
++--------------------------------------+-------------+---------------------+-----------------------------------------------------------------+-----+---------+------------+
+| News & Brews                         | D4482       | 1994-09-14 00:00:00 | Is Anger the Enemy?                                             |  10 | 10.9500 | psychology |
+| News & Brews                         | P2121       | 1992-06-15 00:00:00 | Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean |  40 | 20.9500 | trad_cook  |
+| News & Brews                         | P2121       | 1992-06-15 00:00:00 | Fifty Years in Buckingham Palace Kitchens                       |  20 | 11.9500 | trad_cook  |
+| News & Brews                         | P2121       | 1992-06-15 00:00:00 | Sushi, Anyone?                                                  |  20 | 14.9900 | trad_cook  |
+| Doc-U-Mat: Quality Laundry and Books | N914008     | 1994-09-14 00:00:00 | Is Anger the Enemy?                                             |  20 | 10.9500 | psychology |
+| Doc-U-Mat: Quality Laundry and Books | N914014     | 1994-09-14 00:00:00 | The Gourmet Microwave                                           |  25 |  2.9900 | mod_cook   |
+| Doc-U-Mat: Quality Laundry and Books | P3087a      | 1993-05-29 00:00:00 | Computer Phobic AND Non-Phobic Individuals: Behavior Variations |  20 | 21.5900 | psychology |
+| Doc-U-Mat: Quality Laundry and Books | P3087a      | 1993-05-29 00:00:00 | Life Without Fear                                               |  25 |  7.0000 | psychology |
+| Doc-U-Mat: Quality Laundry and Books | P3087a      | 1993-05-29 00:00:00 | Prolonged Data Deprivation: Four Case Studies                   |  15 | 19.9900 | psychology |
+| Doc-U-Mat: Quality Laundry and Books | P3087a      | 1993-05-29 00:00:00 | Emotional Security: A New Algorithm                             |  25 |  7.9900 | psychology |
++--------------------------------------+-------------+---------------------+-----------------------------------------------------------------+-----+---------+------------+
+10 rows in set (0.01 sec)
+
+mysql> 
