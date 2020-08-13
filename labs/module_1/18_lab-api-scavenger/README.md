@@ -1,6 +1,6 @@
 ![Ironhack logo](https://i.imgur.com/1QgrNNw.png)
 
-# Lab | API Scavenger Game (Bonus Lab)
+# Lab | API Scavenger Game
 
 ## Goals
 
