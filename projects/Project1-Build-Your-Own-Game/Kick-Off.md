@@ -56,7 +56,7 @@ The **mandatory** deliverables that you must turn in are:
 The **deadline** to turn in the deliverables is right before the project presentations.
 
 ## Mentoring
-One of the TAs will be your mentor!
+We will mentor you!
 
 Your mentor will:
 * Keep track of your project in general terms. Your mentor will be the second person that knows more about the project, after you.
@@ -82,7 +82,7 @@ Your mentor is **not** meant to:
 * In the evening, start preparing the slides for Saturday's presentation.
 
 **Phase 3**
-* Presentation time Saturday January 25th at **3PM**! 
+* Presentation time Saturday July 18th at **2PM**! 
 
 ## Presentation
 In your presentation, you will present your game. You may show your code, but this is not necessary. However, the presentation must include the content listed below and a demo of your game:
@@ -95,4 +95,4 @@ In your presentation, you will present your game. You may show your code, but th
 * Possible future improvements
 * Demo of the game (remember to save time for it)
 
-Each student gets 15 minutes to present his or her game. Your presentation may be shorter (this is no problem, its about the content, not the duration), but not longer. 
+Each student gets 7 minutes to present his or her game. Your presentation may be shorter (this is no problem, its about the content, not the duration), but not longer. 
