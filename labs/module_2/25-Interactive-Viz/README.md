@@ -1,10 +1,6 @@
 ![Ironhack logo](https://i.imgur.com/1QgrNNw.png)
 
-<<<<<<< HEAD
 # Lab | Interactive Visualization
-=======
-# Lab | Interactive Visualization (Optional) 
->>>>>>> e17f8cefeca88f112790e6157096410f79f9c804
 
 ## Introduction
 
