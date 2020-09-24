@@ -45,6 +45,8 @@ def transform_data(df):
     
     df['diff_gun_realtime']=(df['guntime_in_second'] - df['realtime_in_second'])
     
+    df['sex'] = df['sex'].apply(lambda x: 'Female' if str(x)[0] == 'V' else 'Male')
+
     bins = list(range(0,24,3)) + [np.inf]
     df['speed_buckets'] = pd.cut(df['speed'],bins=
                                          [i-1 if i > 0 else 0 for i in bins],
