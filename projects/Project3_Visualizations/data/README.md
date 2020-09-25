@@ -1,5 +1,2 @@
-**Please place your data here, but only on your local machine**
- 
- **Please edit to provide a description of the files**
-
+** Dataset that have been used for this project can be found in this [address](https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews) **
 
