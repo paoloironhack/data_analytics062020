@@ -1,4 +1,4 @@
-# ** Women's E-Commerce Clothing Data Analysis** <br>
+# **Women's E-Commerce Clothing Data Analysis** <br>
 This is a Women’s Clothing E-Commerce dataset revolving around the reviews written by customers.
 
 ## **Content**<br>
