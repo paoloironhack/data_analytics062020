@@ -1,4 +1,4 @@
-# **WELCOME** <br>
+# ** Women's E-Commerce Clothing Data Analysis** <br>
 This is a Women’s Clothing E-Commerce dataset revolving around the reviews written by customers.
 
 ## **Content**<br>
@@ -15,7 +15,12 @@ This dataset includes 23486 rows and 10 feature variables. Each row corresponds 
 **Department Name:** Categorical name of the product department name.<br>
 **Class Name:** Categorical name of the product class name.<br>
 
+Please bear in mind that this report is mostly focused on how to use Pythin visualization tools.<br>
 
 **Data analysis and report can be found in Women's E-Commerce Clothing .ipynb file** 
+
+##**Links**
+- **Trello:** [Trello](https://trello.com/b/rU56XUNb/womens-e-commerce-clothing)
+- **Presentation:** [Presentation](https://docs.google.com/presentation/d/1J2xE93fW6hDuRbb0YOTuN5hVM-VZGfz5iRrFlnaxPA4/edit#slide=id.g9b308ab400_0_112)
 
 
