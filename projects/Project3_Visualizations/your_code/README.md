@@ -19,7 +19,7 @@ Please bear in mind that this report is mostly focused on how to use Pythin visu
 
 **Data analysis and report can be found in Women's E-Commerce Clothing .ipynb file** 
 
-##**Links**
+## **Links**
 - **Trello:** [Trello](https://trello.com/b/rU56XUNb/womens-e-commerce-clothing)
 - **Presentation:** [Presentation](https://docs.google.com/presentation/d/1J2xE93fW6hDuRbb0YOTuN5hVM-VZGfz5iRrFlnaxPA4/edit#slide=id.g9b308ab400_0_112)
 
