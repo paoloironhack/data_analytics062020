@@ -2,7 +2,7 @@
 
 # Guided Project: Visualizing Real World Data
 
-Project 3: Visualizing Real World Data – IMDb Movies   
+Data Visualization of IMDb Movies   
 Archana Rao  
 
 Ironhack | Amsterdam | Data Analytics Bootcamp - 26-09-2020
@@ -30,8 +30,6 @@ What kind of movies are liked by the audience? Are the genres with high IMDb sco
 ## Dataset
 The dataset is taken from Kaggle which is in turn from the IMDb database itself. While there are lot of choices for movies datasets apart from IMDb, this one has information for movies released from 1916 till 2016
  
-
-
 ## Workflow
 # Choose an interesting topic and gather a dataset with appropriate details and file format. 
 #Understand the data and come up with problem statements.
