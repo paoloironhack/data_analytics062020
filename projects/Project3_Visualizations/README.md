@@ -31,12 +31,12 @@ What kind of movies are liked by the audience? Are the genres with high IMDb sco
 The dataset is taken from Kaggle which is in turn from the IMDb database itself. While there are lot of choices for movies datasets apart from IMDb, this one has information for movies released from 1916 till 2016
  
 ## Workflow
-# Choose an interesting topic and gather a dataset with appropriate details and file format. 
-#Understand the data and come up with problem statements.
-#Perform data wrangling/cleaning.
-# Update ipynb / python file with interpretation using Pandas/python and visualization of data using Seaborn and Matplotlib plots.
-#Present the data insights with storytelling in a slide deck and evaluate the deviation of facts from hypothesis with proper reasoning.
-#Create a README file which describes about the project.
+Choose an interesting topic and gather a dataset with appropriate details and file format. 
+Understand the data and come up with problem statements.
+Perform data wrangling/cleaning.
+Update ipynb / python file with interpretation using Pandas/python and visualization of data using Seaborn and Matplotlib plots.
+Present the data insights with storytelling in a slide deck and evaluate the deviation of facts from hypothesis with proper reasoning.
+Create a README file which describes about the project.
 
 
 ## Organization
