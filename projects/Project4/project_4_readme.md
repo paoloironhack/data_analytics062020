@@ -46,7 +46,7 @@ The technical requirements for this project are as follows:
    - A **README file** to guide the reader through the project and files and also have a functional file structure. The README file should clearly include which topic you chose and which are the questions you would like to find an answer to. 
    - **A data folder** with an additional **README.md file** inside that explains the data set. (Without README file in the data folder you will not be able to push the folder because empty folders are not accepted by git)
    - **Python files** and **Jupyter notebooks**<br>
-These files should be self sufficient. Someone with no exposure to the problem should be able to read the notebooks and understand your analysis. Make sure your notebooks looks clean and well documented by making proper use of comments, docstrings and markdowns to tell your story. 
+These files should be self sufficient. Someone with no exposure to the problem should be able to read the notebooks and understand your analysis. Make sure your notebooks look clean and well documented by making proper use of comments, docstrings and markdowns to tell your story. 
       -  **We strongly suggest to start the 
     notebook files with and Introduction and conclude it with a Conclusions section**
       - We encourage you to produce      **meaningful and clear plots** adjusted to the data you want to present and to make proper use of   font(size), labels, contrasts, legends  and colors to make memorable the story you want to tell audience.
@@ -59,14 +59,14 @@ but **stored on your group folder [here](https://drive.google.com/drive/folders/
 - **DATA <br>
 Please do not upload any data (or SQL database) to the repository** but place a link to the data in your jupyter notebook as we usually do. You can then ask the reader in the notebook to download the data and place them locally in the provided empty data folder (with README file in it) Remember to use relative paths in the notebook. The link in the notebook can point to the original data set or to your group's data folder on google drive [here](https://drive.google.com/drive/folders/1zIDpffMj5iQ5xKKGV3nSKM38buvRM6jp?usp=sharing) <br>
 
-- **SQL Database**
-The data should be stored (on g.drive) as SQL database. You can then decide to do the analysis with pandas or  using SQL, **but storing the data as database is mandatory**
+- **SQL Database** <br>
+ The data should be stored (on g.drive) as SQL database. You can then decide to do the analysis with pandas or  using SQL, **but storing the data as database is mandatory**
  
 
 ## Deadline for deliverables and project presentation
 
-- Project presentation will be on Saturday, October 17th 2020
-- All deliverables should  be handed in by Saturday, October 17th 2020
+- Project presentation will be on **Saturday, October 17th 2020**
+- All deliverables should  be handed in by **Saturday, October 17th 2020**
 
 
 ## Group Composition
