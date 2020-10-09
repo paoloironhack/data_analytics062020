@@ -47,9 +47,9 @@ The technical requirements for this project are as follows:
    - **A data folder** with an additional **README.md file** inside that explains the data set. (Without README file in the data folder you will not be able to push the folder because empty folders are not accepted by git)
    - **Python files** and **Jupyter notebooks**<br>
 These files should be self sufficient. Someone with no exposure to the problem should be able to read the notebooks and understand your analysis. Make sure your notebooks looks clean and well documented by making proper use of comments, docstrings and markdowns to tell your story. 
-    -  **We strongly suggest to start the 
+      -  **We strongly suggest to start the 
     notebook files with and Introduction and conclude it with a Conclusions section**
-    - We encourage you to produce **meaningful and clear plots** adjusted to the data you want to present and to make proper use of   font(size), labels, contrasts, legends  and colors to make memorable the story you want to tell audience.
+      - We encourage you to produce      **meaningful and clear plots** adjusted to the data you want to present and to make proper use of   font(size), labels, contrasts, legends  and colors to make memorable the story you want to tell audience.
 
 
 The following deliverables should **NOT be pushed** to your group's repository
