@@ -38,18 +38,18 @@ The technical requirements for this project are as follows:
 
 ## Necessary Deliverables
 
-* **Project repository** 
- - Your repository must be clean and organized; this means that it must include  
+* **Project repository** <br>
+ **Please add the repository link on the excel sheet on our g. drive [here](https://drive.google.com/open?id=1Q5Ao2rJbzb4KVvby3foPwla-CGxipLWr).** 
+ Your repository must be clean and organized. As repository template you could use the repository you created for project2; 
+ this means that it must include  
    - A **.gitignore**  file that blocks any images and datafiles, 
    - A **README file** to guide the reader through the project and files and also have a functional file structure. The README file should clearly include which topic you chose and which are the questions you would like to find an answer to. 
-   - As  repository template you could use the repository you created  for project2
    - **A data folder** with an additional **README.md file** inside that explains the data set. (Without README file in the data folder you will not be able to push the folder because empty folders are not accepted by git)
-  - **Please add the repository link on the excel sheet on our g. drive [here](https://drive.google.com/open?id=1Q5Ao2rJbzb4KVvby3foPwla-CGxipLWr)**
-
-* **Python files** and **Jupyter notebooks**<br>
+   - **Python files** and **Jupyter notebooks**<br>
 These files should be self sufficient. Someone with no exposure to the problem should be able to read the notebooks and understand your analysis. Make sure your notebooks looks clean and well documented by making proper use of comments, docstrings and markdowns to tell your story. 
-  -  **We strongly suggest to start the n otebook files with and Introduction and conclude it with a Conclusions section**
-  - We encourage you to produce **meaningful and clear plots** adjusted to the data you want to present and to make proper use of   font(size), labels, contrasts, legends  and colors to make memorable the story you want to tell audience.
+    -  **We strongly suggest to start the 
+    notebook files with and Introduction and conclude it with a Conclusions section**
+    - We encourage you to produce **meaningful and clear plots** adjusted to the data you want to present and to make proper use of   font(size), labels, contrasts, legends  and colors to make memorable the story you want to tell audience.
 
 
 The following deliverables should **NOT be pushed** to your group's repository
