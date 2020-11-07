@@ -26,9 +26,9 @@ In particular, we would like you to consider the following:
 We will then have a presentation each session. 
 
 ## News 
-- [British Government Educational Algorithm](https://www.theguardian.com/education/2020/aug/14/punishment-by-statistics-the-father-who-foresaw-a-level-algorithm-flaws)
-- [Loss by Algorithm](https://www.bugsnag.com/blog/bug-day-460m-loss)
-- [Alpha Go](https://www.blog.google/technology/ai/alphago-machine-learning-game-go/)
+- [British Government Educational Algorithm](https://www.theguardian.com/education/2020/aug/14/punishment-by-statistics-the-father-who-foresaw-a-level-algorithm-flaws) (Nina)
+- [Loss by Algorithm](https://www.bugsnag.com/blog/bug-day-460m-loss) (Lukas)
+- [Alpha Go](https://www.blog.google/technology/ai/alphago-machine-learning-game-go/) (Gorkem)
 - [Google’s Self-Driving Car](https://www.iflscience.com/technology/google-has-developed-self-driving-car/)
 - [Facebook’s Face Recognition App](https://www.vice.com/en/article/k7ekmv/facebook-facial-recognition-app)
 - [Tay Chatbot](https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist)
@@ -37,7 +37,7 @@ We will then have a presentation each session.
 - [Brain AI](https://www.iflscience.com/brain/artificial-intelligence-recreates-images-from-inside-the-human-brain/)
 - [Spotify’s Recommendation Model](https://medium.com/@terry.foley555/spotify-algorithms-5f38b6b6db58)
 - [Deepfakes](https://medium.com/swlh/the-rise-of-deepfakes-19972498487a)
-
+- [Machine Learning and Law Enforcement (predictive policing)](https://www.herox.com/blog/455-machine-learning-and-the-age-of-predictive-policin) (Codruta)
 
 
 
