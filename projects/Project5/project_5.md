@@ -116,9 +116,6 @@ Please do not upload any data (or SQL database) to the repository** but place a 
 *November 28th* 
 * Project Presentations. 
 
-*May 28th*
-* 11:00: Presentations! 
-
 <a name="presentation"></a>
 
 ## Presentation  
