@@ -25,11 +25,11 @@ Before solving this challenge, review your lesson about database structure and d
 * **What entities and attributes should be included in the database?**
 	* For each attribute, what data type is most suitable?
 	* Note that in MySQL typically each entity table should have an auto-increment numeric ID. The auto-increment ID is different from the customer ID or staff ID.
-	* Also note that some attributes are required while other ones can be blank.
+	* Also note that some attributes are required while other ones can be blank. take a picture with your phone and send the image to yourself. If you use software to 
 
 * **What are the relations between these entities? Which relations are one-to-one vs one-to-many vs many-to-many?**
 
-Use pen and paper to create the design, take a picture with your phone and send the image to yourself. If you use software to create the database diagram, export in the image format (JPG or PNG). Either way, the image will be submitted as one of the deliverables.
+Use pen and paper to create the design,create the database diagram, export in the image format (JPG or PNG). Either way, the image will be submitted as one of the deliverables.
 Please place your image in our google drive [here](https://drive.google.com/open?id=1E4DAD7lhttI0TS8bgo4HSNLYbCYUHYvB) using the format **your_name_challenge_1**.
 
 ## Challenge 2 - Create the Database and Tables
@@ -70,7 +70,7 @@ For your convenience, we provide you some example dummy data. These dummy data m
 
 ### Cars
 
-| ID | VIN | Manufacturer | Model | Year | Color |
+| IN | D | VIManufacturer | Model | Year | Color |
 | --- | --- | --- | --- | --- | --- |
 | 0 | 3K096I98581DHSNUP | Volkswagen | Tiguan | 2019 | Blue |
 | 1 | ZM8G7BEUQZ97IH46V | Peugeot | Rifter | 2019 | Red |
