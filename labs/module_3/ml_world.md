@@ -35,9 +35,10 @@ We will then have a presentation each session.
 - [AI in Retail](https://www.forbes.com/sites/bernardmarr/2018/08/10/how-fashion-retailer-hm-is-betting-on-artificial-intelligence-and-big-data-to-regain-profitability/#66840f4a5b00)
 - [Voice to Instrument](https://blog.google/technology/ai/what-if-you-could-turn-your-voice-any-instrument/)
 - [Brain AI](https://www.iflscience.com/brain/artificial-intelligence-recreates-images-from-inside-the-human-brain/)
-- [Spotify’s Recommendation Model](https://medium.com/@terry.foley555/spotify-algorithms-5f38b6b6db58)
-- [Deepfakes](https://medium.com/swlh/the-rise-of-deepfakes-19972498487a)
+- [Spotify’s Recommendation Model](https://medium.com/@terry.foley555/spotify-algorithms-5f38b6b6db58) (Archana)
+- [Deepfakes](https://medium.com/swlh/the-rise-of-deepfakes-19972498487a) 
 - [Machine Learning and Law Enforcement (predictive policing)](https://www.herox.com/blog/455-machine-learning-and-the-age-of-predictive-policin) (Codruta)
+- Image Compression using K-Means Clustering (Frank) 
 
 
 
